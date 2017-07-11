@@ -1,23 +1,28 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+      <div v-if="!detailSign">
+           <div class="main">
+             <!-- <keep-alive> -->
+                <router-view></router-view>
+             <!-- </keep-alive> -->
+          </div>
+          <foots></foots>
+      </div>
+      <sign-detail v-else></sign-detail>
   </div>
 </template>
 
 <script>
+import foots from "./view/footer.vue"
+import signDetail from "./view/sign-detail.vue"
+import {mapGetters} from 'vuex'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {foots, signDetail},
+  computed: {
+    ...mapGetters(['detailSign'])
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
