@@ -52,11 +52,11 @@
 ## Build Setup
 
 项目运行
-git clone https://github.com/SenYong/music.git
-npm install
-npm run dev
+# git clone https://github.com/SenYong/music.git
+# npm install
+# npm run dev
 
 
 项目打包
-npm run build
+# npm run build
 
