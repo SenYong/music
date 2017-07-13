@@ -52,17 +52,11 @@
 ## Build Setup
 
 项目运行
-
 git clone https://github.com/SenYong/music.git
-
-# install dependencies
 npm install
-
-# serve with hot reload at localhost:8080
 npm run dev
 
 
 项目打包
-# build for production with minification
 npm run build
 
